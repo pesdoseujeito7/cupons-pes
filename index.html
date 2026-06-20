@@ -3,72 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cupom PES do Seu Jeito</title>
+<title>Validador de Cupons PES</title>
 
 <style>
 
 body{
-background:#111;
-font-family:Arial,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-color:white;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
 }
 
-.box{
-background:#1b1b1b;
-padding:40px;
-border-radius:15px;
-text-align:center;
-width:350px;
-box-shadow:0 0 20px rgba(0,0,0,.4);
+.container{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+    width:90%;
+    max-width:500px;
+    text-align:center;
 }
 
 h1{
-margin-bottom:20px;
+    color:#0d6efd;
+}
+
+.aviso{
+    background:#fff3cd;
+    border:1px solid #ffe69c;
+    color:#664d03;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:20px;
+    text-align:left;
+    font-size:14px;
+    line-height:1.5;
 }
 
 input{
-width:100%;
-padding:12px;
-border:none;
-border-radius:8px;
-margin-bottom:15px;
-font-size:16px;
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
 }
 
 button{
-width:100%;
-padding:12px;
-background:#00c853;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#0d6efd;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
 }
 
 button:hover{
-opacity:.9;
+    background:#0b5ed7;
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="box">
+<div class="container">
 
-<h1>PES do Seu Jeito</h1>
+<h1>Cupom de Desconto</h1>
 
-<p>Digite seu cupom</p>
+<div class="aviso">
+<strong>⚠️ Atenção!</strong><br><br>
 
-<input type="text" id="cupom">
+Se você ganhou um CUPOM para uma determinada quantidade de uniformes, nunca tente utilizá-lo para outra quantidade.<br><br>
 
-<button onclick="validar()">VALIDAR</button>
+Não nos responsabilizamos por valores enviados incorretamente.
+</div>
+
+<input
+type="text"
+id="cupom"
+placeholder="Digite seu cupom"
+>
+
+<button onclick="validar()">
+Validar Cupom
+</button>
 
 </div>
 
@@ -84,22 +108,71 @@ document.getElementById("cupom")
 
 const cupons = {
 
-"FELIPE25":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/compre",
+"APZ1Y6K":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/c%C3%B3pia-pagamento",
 
-"JOAO10":"https://nubank.com.br/cobranca/EO6JDxdzy194ptha",
+"GJP62SG":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
 
-"VIP15":"https://nubank.com.br/cobranca/MGHux0sHp194ptha"
+"JSO5HD4":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"JPSFD22":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"NJSK6FF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"HDLL58D":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"BH256SS":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"UO55D22":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"DFGHSFF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"HSSHJRY":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"HFKSKFK":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"LJDLLDL":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"KNGLLGG":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"SGGHHF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"VHJHTHH":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"VJJRRYY":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"BBHGJJJ":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"HHTTHH":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"BJJFJJBF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"FGJJNHK":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"FGJJJFF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"FKKHLOD":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"DGHDDG":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"DLLGLLLF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"UUUYRFG":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"NNNDJFF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"JDJGGKLL":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3",
+
+"OIUIOTTF":"https://pesdoseujeito.wixsite.com/pes-do-seu-jeito/contact-3"
 
 };
 
 if(cupons[cupom]){
 
-window.location.href =
-cupons[cupom];
+window.location.href = cupons[cupom];
 
 }else{
 
-alert("Cupom inválido!");
+alert("Cupom inválido ou expirado!");
 
 }
 
